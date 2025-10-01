@@ -5,6 +5,7 @@ import {
   SignUpButton,
   UserButton,
 } from '@clerk/nextjs'
+import Link from 'next/link'
 
 export default function Header() {
   return (
@@ -30,6 +31,13 @@ export default function Header() {
               </SignUpButton>
             </SignedOut>
             <SignedIn>
+              <Link
+                href="/repos"
+                className="text-gray-300 hover:text-white mr-4"
+              >
+                Repos{' '}
+              </Link>
+
               <UserButton />
             </SignedIn>
           </div>
